@@ -1,24 +1,18 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+    Iniciar Sesión: Ingresar con correo y password.
 
-* Ruby version
+    Cerrar Sesión: Botón Logout.
 
-* System dependencies
+    Creación de usuario: Registrarse con un correo y un password.
 
-* Configuration
+    Perfíl de Usuario: Agregar información requerida (nombres, apellidos, ciudad, correo). editar y actualizar información requerida. crear nuevo libro. Agregar libros en biblioteca del usuario (nombre, imagen del libro, descripción, id). editar un libro. eliminar un libro. estado del libro.
 
-* Database creation
+    Biblioteca: buscador de libros (por nombre ó autor).
 
-* Database initialization
+    Detalle del libro (nombre, imagen del libro, descripción). estado del libro (disponible, prestado). perfil del usuario (nombres, ciudad, correo). botón solicitar.
 
-* How to run the test suite
+    Segundo Usuario:
+        Notificación de prestamo: libro que solicitaron. estado del libro.
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
