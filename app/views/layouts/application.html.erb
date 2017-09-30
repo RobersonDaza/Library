@@ -13,7 +13,7 @@
         <ul class="nav justify-content-end">
             <% if user_signed_in? %>
             <li class="nav-item">
-                <%= link_to 'Exit', destroy_user_session_path, method: :delete %>
+                <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
             </li>
             <% else %>
             <li class="nav-item">

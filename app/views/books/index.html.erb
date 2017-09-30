@@ -1,0 +1,26 @@
+<h1>All Books</h1>
+<%= link_to 'new_book', new_book_path %>
+<%= link_to 'my profile', user_path(current_user) %>
+
+<table>
+  <tr>
+      <th>isbn</th>
+    <th>name</th>
+    <th>author</th>
+  </tr>
+
+  <% @book.each do |book| %>
+    <tr>
+        <td><%= book.isbn%></td>
+      <td><%= book.name %></td>
+      <td><%= book.author %></td>
+      <td><%= link_to 'show', book_path(book) %></td>
+      <td><%= link_to 'Edit', edit_book_path(book) %></td>
+      <td><%= link_to 'destroy', book_path(book),
+             method: :delete,
+             data: {confirm: 'Are you sure?'} %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Back', new_user_session_path %>

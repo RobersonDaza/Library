@@ -32,6 +32,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
 
       #Extra
       t.string :name
+      t.string :city
+      t.string :address
+      t.string :phone
       t.timestamps null: false
     end
 

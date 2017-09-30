@@ -1,0 +1,32 @@
+<h1>Edit Book</h1>
+
+<%= form_with(model: @book) do |form| %>
+
+<p>
+   <%= form.label :name%><br>
+   <%= form.text_field :name %>
+ </p>
+
+ <p>
+    <%= form.label :isbn%><br>
+    <%= form.text_field :isbn %>
+  </p>
+
+ <p>
+    <%= form.label :author%><br>
+    <%= form.text_field :author %>
+  </p>
+
+ <p>
+   <%= form.label :description %><br>
+   <%= form.text_field :description %>
+ </p>
+
+ <p>
+   <%= form.submit %>
+ </p>
+
+
+<% end %>
+
+<%= link_to 'Back', books_path %>

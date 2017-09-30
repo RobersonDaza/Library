@@ -1,5 +1,7 @@
 <% if user_signed_in? %>
 <h1>Welcome <%= current_user.name %></h1>
+<%= link_to 'My Books', books_path %>
+<%= link_to 'Edit profile ', edit_user_registration_path %>
 <% else %>
-<h1>Thanks you</h1>
+<h1>Bye</h1>
 <% end %>

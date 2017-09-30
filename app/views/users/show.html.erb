@@ -1,0 +1,38 @@
+<h1>Mi Profile</h1>
+<!-- <%= link_to 'sign_out', new_user_session_path %> -->
+<%= link_to 'new_book', new_book_path %>
+<%= link_to 'Edit profile ', edit_user_registration_path %>
+
+
+
+<!-- <%= form_tag books_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search"%>
+  </p>
+<% end %> -->
+
+
+
+<p>
+  <strong>Name:</strong>
+  <%= current_user.name %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= current_user.city %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= current_user.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= current_user.phone %>
+</p>
+
+
+<%= link_to 'Back', new_user_session_path %>

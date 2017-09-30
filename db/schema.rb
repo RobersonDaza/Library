@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20170929003501) do
   create_table "books", force: :cascade do |t|
     t.integer "isbn"
     t.string "name"
+    t.string "author"
     t.string "description"
     t.string "img_url"
     t.datetime "created_at", null: false
@@ -41,6 +42,9 @@ ActiveRecord::Schema.define(version: 20170929003501) do
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
     t.string "name"
+    t.string "city"
+    t.string "address"
+    t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
