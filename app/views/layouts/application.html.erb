@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Sessions</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
+<body>
+    <header>
+        <nav class="navbar nav-inverse bg-primary d-flex justify-content-end">
+            <a class="navbar-brand text-white mr-auto p-2" href="#">Library Books</a>
+            <!-- Navbar content -->
+            <ul class="nav">
+                <% if user_signed_in? %>
+                <li class="nav-item">
+                    <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+                </li>
+                <% else %>
+                <li class="nav-item">
+                    <%= link_to 'Sign in', new_user_session_path %>
+                </li>
+                <li class="nav-item">
+                    <%= link_to 'Sign Up', new_user_registration_path %>
+                </li>
+                <% end %>
+            </ul>
+        </nav>
+    </header>
 
-        <ul class="nav justify-content-end">
-            <% if user_signed_in? %>
-            <li class="nav-item">
-                <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-            </li>
-            <% else %>
-            <li class="nav-item">
-                <%= link_to 'Sign in', new_user_session_path %>
-            </li>
-            <li class="nav-item">
-                <%= link_to 'Sign Up', new_user_registration_path %>
-            </li>
-            <% end %>
-        </ul>
 
-
-      <div class="container">
-         <p class="notice"><%= notice %></p>
-         <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="container">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= yield %>
     </div>
-  </body>
+</body>
 </html>

@@ -1,7 +1,12 @@
 <% if user_signed_in? %>
-<h1>Welcome <%= current_user.name %></h1>
-<%= link_to 'My Books', books_path %>
-<%= link_to 'Edit profile ', edit_user_registration_path %>
+<h3 class="text display-4 col-6">"Literature is the art of the word". <br> <strong>Manuel Gayol Fernández</strong> </h3>
+<h1 class="display-2 mt-5">Welcome <%= current_user.name %></h1>
+<%= link_to 'New Book', new_book_path, class: "btn btn-primary " %>
+<%= link_to 'My Books', books_path, class: "btn btn-primary" %>
+<%= link_to 'My Profile', user_path(current_user), class: "btn btn-primary" %>
+<%= link_to 'Edit profile ', edit_user_registration_path, class: "btn btn-primary" %>
+
 <% else %>
-<h1>Bye</h1>
+<h3 class="text display-4 col-6">"The writing is the paint of the voice". <br> <strong>Voltaire.</strong></h3>
+<h1 class="display-2 mt-5">Bye friend.</h1>
 <% end %>

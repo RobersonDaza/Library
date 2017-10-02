@@ -1,0 +1,19 @@
+<h1 class="display-4"> Custom Search </h1>
+<%= form_for @search, html: {class: "pure-form"} do |f| %>
+
+<div class="field form-group col-3">
+    <%= f.label :name %><br>
+    <%=  f.text_field :name, class: "form-control" %><br>
+</div>
+<div class="field form-group col-3">
+    <%= f.label :isbn %><br>
+    <%=  f.text_field :isbn, class: "form-control" %><br>
+</div>
+<div class="field form-group col-3">
+    <%= f.label :author %><br>
+    <%=  f.text_field :author, class: "form-control" %><br>
+</div>
+<div class="actions"><%= f.submit 'search', class:"btn btn-primary"%></div>
+<% end %>
+
+<%= link_to 'Back', books_path, class: "btn btn-primary" %>

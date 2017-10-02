@@ -1,8 +1,23 @@
-<h1>Mi Profile</h1>
-<!-- <%= link_to 'sign_out', new_user_session_path %> -->
-<%= link_to 'new_book', new_book_path %>
-<%= link_to 'Edit profile ', edit_user_registration_path %>
+<h1 class="text-center display-4 col-4 ml-4">My Profile</h1>
 
+<div class="card text-center ml-5" style="width: 20rem;">
+  <img class="card-img-top" src="http://focuslabllc.com/assets/team/WEB-AlexSailer.jpg")>
+  <div class="card-block">
+    <h4 class="card-title pt-2">Name:<strong><%= current_user.name %></strong></h4>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">City:<strong><%= current_user.city %></strong></li>
+    <li class="list-group-item">Adress:<strong><%= current_user.address %></strong></li>
+    <li class="list-group-item">Phone:<strong><%= current_user.phone %></strong></li>
+    <li class="list-group-item"><%= link_to 'new_book', new_book_path, class: "btn btn-primary btn-block" %></li>
+    <li class="list-group-item"><%= link_to 'My Books', books_path, class: "btn btn-primary btn-block" %></li>
+    <li class="list-group-item"><%= link_to 'Edit profile ', edit_user_registration_path, class: "btn btn-primary btn-block" %></li>
+    <li class="list-group-item mb-5"><%= link_to 'Back', new_user_session_path, class:"btn btn-info btn-block" %></li>
+  </ul>
+
+
+
+</div>
 
 
 <!-- <%= form_tag books_path, :method => 'get' do %>
@@ -11,28 +26,3 @@
     <%= submit_tag "Search"%>
   </p>
 <% end %> -->
-
-
-
-<p>
-  <strong>Name:</strong>
-  <%= current_user.name %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= current_user.city %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= current_user.address %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= current_user.phone %>
-</p>
-
-
-<%= link_to 'Back', new_user_session_path %>

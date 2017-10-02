@@ -1,18 +1,30 @@
+    Registrarse (Sign Up)
+        * Fomulario (Nombre, dirección, teléfono, Ciudad, Correo, Contraseña, Confirmacion de contraseña)
 
+    Iniciar Sesion (Sign In)
+        * Ingresar con correo y password
+        * Olvido la contraseña
 
-    Iniciar Sesión: Ingresar con correo y password.
+    Crear un nuevo libro
+        * formulario (Nombre, Isbn, Autor, Descripción)
 
-    Cerrar Sesión: Botón Logout.
+    Perfíl
+        * Información (Nombre, Ciudad, Dirección, teléfono)
+        * Crear un nuevo libro
+        * Ver mi lista de libros
+        * Editar mi perfíl
 
-    Creación de usuario: Registrarse con un correo y un password.
+    Editar mi períl
 
-    Perfíl de Usuario: Agregar información requerida (nombres, apellidos, ciudad, correo). editar y actualizar información requerida. crear nuevo libro. Agregar libros en biblioteca del usuario (nombre, imagen del libro, descripción, id). editar un libro. eliminar un libro. estado del libro.
+        * Cambiar cualquier campo de registro
+        * Cancelar mi cuenta
 
-    Biblioteca: buscador de libros (por nombre ó autor).
+    Mis libros
+        * Buscador de libros
+        * Busqueda Avanzada
+        * Lista de libros
+        * Crear nuevos libros
+        * Ver mi perfíl
 
-    Detalle del libro (nombre, imagen del libro, descripción). estado del libro (disponible, prestado). perfil del usuario (nombres, ciudad, correo). botón solicitar.
-
-    Segundo Usuario:
-        Notificación de prestamo: libro que solicitaron. estado del libro.
-
-
+    Busqueda Avanzada
+        * formulario de busqueda (nombre, isbn, autor)

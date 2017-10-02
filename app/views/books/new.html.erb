@@ -1,27 +1,36 @@
-<h1> New book </h1>
+<h1 class="display-4"> New book </h1>
 <%= form_for :book, url: books_path, method: :post do |f|%>
 
 <% if @book.errors.any? %>
 <div id="error_explanation">
-  <h2>
-    <%= pluralize(@book.errors.count, "error") %> prohibited
-    this book from being saved:
-  </h2>
-  <ul>
-    <% @book.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-    <% end %>
-  </ul>
+    <h2>
+        <%= pluralize(@book.errors.count, "error") %> prohibited
+        this book from being saved:
+    </h2>
+    <ul>
+        <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+    </ul>
 </div>
 <% end %>
+<div class="field form-group col-3">
     <%= f.label :name %><br>
-    <%=  f.text_field :name %><br>
+    <%=  f.text_field :name, class: "form-control" %><br>
+</div>
+<div class="field form-group col-3">
     <%= f.label :isbn %><br>
-    <%=  f.text_field :isbn %><br>
+    <%=  f.text_field :isbn, class: "form-control" %><br>
+</div>
+<div class="field form-group col-3">
     <%= f.label :author %><br>
-    <%=  f.text_field :author %><br>
+    <%=  f.text_field :author, class: "form-control" %><br>
+</div>
+<div class="field form-group col-3">
     <%= f.label :description %><br>
-    <%=  f.text_area :description %><br>
-    <%= f.submit 'create'%>
+    <%=  f.text_area :description, class: "form-control" %><br>
+</div>
+<%= f.submit 'create', class:"btn btn-primary"%>
 <% end %>
-<%= link_to 'Mi profile', books_path %>
+<%= link_to 'my profile', user_path(current_user), class:"btn btn-primary" %>
+<%= link_to 'Back', new_user_session_path, class:"btn btn-info" %>

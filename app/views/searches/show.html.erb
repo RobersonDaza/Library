@@ -1,0 +1,29 @@
+<h1 class="display-4">Search Result</h1>
+
+<% if @search.search_books.empty? %>
+<p>No Records Found</p>
+<% else %>
+
+<br>
+<table class="table table-inverse">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Isbn</th>
+        </tr>
+    </thead>
+    <% @search.search_books.each do |c| %>
+    <tbody>
+        <tr>
+            <th><%= c.name %></th>
+            <th><%= c.author %></th>
+            <th><%= c.isbn %></th>
+        </tr>
+    </tbody>
+</table>
+
+<% end %>
+<% end %>
+
+<%= link_to 'Back', new_search_path, class:"btn btn-primary" %>

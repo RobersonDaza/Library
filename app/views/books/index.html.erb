@@ -1,26 +1,37 @@
-<h1>All Books</h1>
-<%= link_to 'new_book', new_book_path %>
-<%= link_to 'my profile', user_path(current_user) %>
+<h1 class="display-4">My Books</h1>
+    <div class="field form-group col-4">
+    <%= form_tag books_path, :method => 'get' do %>
+        <%= text_field_tag :search, params[:search], class: "form-control", placeholder:"Which book are you looking for?" %>
+        <%= submit_tag "Search", class: "boton btn btn-primary" %>
+    <% end %>
+    <%= link_to 'Advanced Search', new_search_path, class: "btn btn-primary" %>
+    </div>
 
-<table>
-  <tr>
-      <th>isbn</th>
-    <th>name</th>
-    <th>author</th>
-  </tr>
-
-  <% @book.each do |book| %>
+<table class="table table-inverse">
+  <thead>
     <tr>
-        <td><%= book.isbn%></td>
+      <th>Isbn</th>
+      <th>Name</th>
+      <th>Author</th>
+    </tr>
+  </thead>
+  <% @book.each do |book| %>
+  <tbody>
+    <tr>
+      <td><%= book.isbn%></td>
       <td><%= book.name %></td>
       <td><%= book.author %></td>
-      <td><%= link_to 'show', book_path(book) %></td>
-      <td><%= link_to 'Edit', edit_book_path(book) %></td>
-      <td><%= link_to 'destroy', book_path(book),
+      <td><%= link_to 'show', book_path(book), class: "btn btn-primary " %></td>
+      <td><%= link_to 'Edit', edit_book_path(book), class: "btn btn-warning text-white" %></td>
+      <td><%= link_to 'destroy', book_path(book), class: "btn btn-danger",
              method: :delete,
              data: {confirm: 'Are you sure?'} %></td>
     </tr>
+  </tbody>
   <% end %>
 </table>
 
-<%= link_to 'Back', new_user_session_path %>
+<%= link_to 'New Book', new_book_path, class: "btn btn-primary " %>
+<%= link_to 'My Profile', user_path(current_user), class: "btn btn-primary " %>
+
+<%= link_to 'Back', new_user_session_path, class: "btn btn-info " %>
